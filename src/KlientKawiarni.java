@@ -49,4 +49,25 @@ public class KlientKawiarni {
         return "ID: " + idKlienta + "Imie: " + imie + "Nazwisko: " + nazwisko + "E-mail: " + email;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + idKlienta + "Imie: " + imie + "Nazwisko: " + nazwisko + "E-mail: " + email;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // Krok 1: Czy porównuję obiekt z samym sobą?
+        if (this == obj) return true;
+
+        // Krok 2: Czy obj jest null lub innego typu?
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        // Krok 3: Rzutowanie — wiemy już, że obj jest typu Student
+        KlientKawiarni other = (KlientKawiarni) obj;
+
+        // Krok 4: Porównanie pól decydujących o "równości"
+        return this.idKlienta == other.idKlienta
+                || this.email.equals(other.email);
+    }
+
 }
