@@ -46,9 +46,9 @@ public class ProduktMenu {
     public void setKategoria(String kategoria) {
         this.kategoria = kategoria;
     }
-    
 
-    public static int pokazLiczbaProduktow() {
+
+    public static int getLiczbaProduktow() {
         return liczbaProduktow;
     }
 
